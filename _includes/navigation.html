@@ -12,6 +12,10 @@
             {% continue %}
         {% endif %}
 
+        {% if p_level == 1 and p_name == 'index.html' %}
+            {% continue %}
+        {% endif %}
+
         {% if p.bookmark %}
             {% if p_level == 1 %}
                 {% assign first_level_pages = first_level_pages | push:p %}
