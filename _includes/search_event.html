@@ -7,6 +7,14 @@
     {% for page in page_list %}
         {%- assign psearch_tree = page.path | split: "/" -%}
 
+        {% if en_flag and en_flag != page.lang %}
+            {% continue %}
+        {% endif %}
+
+        {% if en_flag != 'en' and page.lang == 'en' %}
+            {% continue %}
+        {% endif %}
+    
         {% if psearch_tree.last == "index.md" %}
             {%- assign p_type = "category" -%}
         {% else %}

@@ -31,6 +31,7 @@
   #btn-nav { right:0; }
   #btn-search { right:38px; }
   #btn-brightness { right:76px; }
+  #btn-lang { right:114px; }
 
   .ico-dark {
     display:block;
@@ -190,9 +191,11 @@
 @include mq(tablet){
 
 .side-banner {
-  button { font-size:1.75rem; }
+  //button { font-size:1.75rem; }
+  button { font-size:1.0rem; }
   #btn-search { right:60px; }
   #btn-brightness { right:120px; }
+  #btn-lang { right:180px; }
 }
 
 .site-tab { 
@@ -230,6 +233,7 @@
   }
   #btn-search { right:69px; }
   #btn-brightness { right:138px; }
+  #btn-lang { right:207px; }
 }
 
 .site-avatar img { display:inline-block; }

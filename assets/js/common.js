@@ -83,7 +83,23 @@ document.addEventListener('DOMContentLoaded', function(){
             nav_item.classList.remove('selected');
         }
     });
+    // Change EN/KR
+    const langButton = document.querySelectorAll("#btn-lang");
 
+    langButton.forEach((btn) => {
+        btn.addEventListener('click', function() {
+            let enFlag = localStorage.getItem('enFlag') === 'true';
+            enFlag = !enFlag;
+            localStorage.setItem('enFlag', enFlag);
+            console.log(enFlag)
+            if (enFlag) {
+                document.getElementById("lang-lst").textContent = 'start';
+            } else {
+                document.getElementById("lang-lst").textContent = 'end';
+            }
+        });
+    });
+    
     // Change Datk/Light Theme
     const themeButton = document.querySelectorAll("#btn-brightness");
     const innerContent = document.querySelector('main');
