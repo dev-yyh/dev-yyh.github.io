@@ -5,7 +5,11 @@
     {% if page.url == "/index.html" %}
         dev-yyh: Tech Insights for Developers
     {% elsif page_type == "category" %}
-        {{ category_title }}
+        {% if category_title == 'en' %}
+            dev-yyh: Tech Insights for Developers
+        {% else %}
+            {{ category_title }}
+        {% endif %}
     {% else %}
         {{ page.title }}
     {% endif %}
