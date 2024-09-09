@@ -1,3 +1,4 @@
 ---
+title: Algorithm
 lang: en
 ---

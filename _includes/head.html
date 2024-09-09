@@ -1,19 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>
-    {% if page.url == "/index.html" %}
-        dev-yyh: Tech Insights for Developers
-    {% elsif page_type == "category" %}
-        {% if category_title == 'en' %}
-            dev-yyh: Tech Insights for Developers
-        {% else %}
-            {{ category_title }}
-        {% endif %}
-    {% else %}
-        {{ page.title }}
-    {% endif %}
-</title>
+
 {% seo %}
 
 <link rel="shortcut icon" type="image/png" href="{{ site.logo_img | prepend: site.baseurl }}">
@@ -62,9 +50,6 @@
 </script>
 
 <meta name="baseurl" content="{{ site.baseurl }}">
-<meta
-name="description"
-content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 <!-- Latex -->
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
