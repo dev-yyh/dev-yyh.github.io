@@ -3,6 +3,8 @@ description: "A blog sharing coding tips, tutorials, and the latest in tech for 
 logo_img: "/assets/img/favicon.webp"
 profile_img: "/assets/img/profile.webp"
 
+generator: "Jekyll v4.3.3"
+
 # Social Links
 email: example@gmail.com
 github_username: github
@@ -16,12 +18,12 @@ giscus_repo: "dev-yyh/dev-yyh.github.io"
 giscus_repoId: "R_kgDOMlPT1w"
 giscus_category: "Q&A"
 giscus_categoryId: "DIC_kwDOMlPT184Ch0R1"
-goatcounter_code: byanko77
+goatcounter_code:
 google_analytics:
 
 # If your repo name follows the format "<user-name>.github.io", then leave the below blank.
 # Otherwise, set its value as "/<repo-name>". ex) baseurl: /myblog
-baseurl: 
+baseurl:
 
 # Build settings
 plugins:
