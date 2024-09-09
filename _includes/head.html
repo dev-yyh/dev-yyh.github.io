@@ -2,30 +2,30 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% assign title = page.title %}
+{% assign tmp_title = page.title %}
 {% if page.thumbnail %}
-    {% assign content = page | strip_html | strip_newlines | truncate: 160 %}
+    {% assign tmp_content = page | strip_html | strip_newlines | truncate: 160 %}
 {% else %}
-    {% assign content = site.description %}
+    {% assign tmp_content = site.description %}
 {% endif %}
-{% assign url = site.url | append: page.url | remove: 'index.html' %}
+{% assign tmp_url = site.url | append: page.url | remove: 'index.html' %}
 {% assign published_date = page.date | date: '%Y-%m-%dT00:00:00+09:00' %}
 
-<title> {{ title }} | dev-yyh </title>
+<title> {{ tmp_title }} | dev-yyh </title>
 <meta name="generator" content="{{ site.generator }}">
-<meta property="og:title" content="{{ title }}">
+<meta property="og:title" content="{{ tmp_title }}">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="{{ content }}">
-<meta property="og:description" content="{{  content }}">
-<link rel="canonical" href="{{ url }}">
-<meta property="og:url" content="{{ url }}">
+<meta name="description" content="{{ tmp_content }}">
+<meta property="og:description" content="{{  tmp_content }}">
+<link rel="canonical" href="{{ tmp_url }}">
+<meta property="og:url" content="{{ tmp_url }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="{{ published_date }}">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="{{ title }}">
+<meta property="twitter:title" content="{{ tmp_title }}">
 <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"{{ published_date }}","datePublished":"{{ published_date }}","description":"{{ content }}","headline":"{{ title }}","mainEntityOfPage":{"@type":"WebPage","@id":"{{ url }}"},"url":"{{ url }}"}</script>
+    {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"{{ published_date }}","datePublished":"{{ published_date }}","description":"{{ tmp_content }}","headline":"{{ tmp_title }}","mainEntityOfPage":{"@type":"WebPage","@id":"{{ tmp_url }}"},"url":"{{ tmp_url }}"}</script>
 
 <link rel="shortcut icon" type="image/png" href="{{ site.logo_img | prepend: site.baseurl }}">
 <style>
