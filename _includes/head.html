@@ -14,7 +14,7 @@
 <title> {{ tmp_title }} | dev-yyh </title>
 <meta name="generator" content="{{ site.generator }}">
 <meta property="og:title" content="{{ tmp_title }}">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="{% if en_flag %}en_US{% else %}ko_KR{% endif %}">
 <meta name="description" content="{{ tmp_content }}">
 <meta property="og:description" content="{{  tmp_content }}">
 <link rel="canonical" href="{{ tmp_url }}">
