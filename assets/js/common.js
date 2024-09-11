@@ -363,7 +363,8 @@ function searchRelated(pages){
         let contents = document.createElement("li");
         contents.classList.add("related-item");
         contents.innerHTML = '<a href="' + post.url +
-            '"><img src="' + post.thumbnail + 
+            '"><img src="' + post.thumbnail +
+            '" art="' + category + 
             '"/><p class="category">' + category +  
             '</p><p class="title">' + post.title + 
             '</p><p class="date">' + date +
