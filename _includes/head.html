@@ -1,22 +1,24 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 {% assign tmp_title = page.title %}
 {% if page.thumbnail %}
-    {% assign tmp_content = page | strip_html | strip_newlines | truncate: 160 %}
+    {% if page.description %}
+        {% assign tmp_content = page.description | strip_html | strip_newlines | truncate: 160 %}
+    {% else %}
+        {% assign tmp_content = page | strip_html | strip_newlines | truncate: 160 %}
+    {% endif %}
 {% else %}
     {% assign tmp_content = site.description %}
 {% endif %}
 {% assign tmp_url = site.url | append: page.url | remove: 'index.html' %}
 {% assign published_date = page.date | date: '%Y-%m-%dT00:00:00+09:00' %}
-
 <title> {{ tmp_title }} | dev-yyh </title>
 <meta name="generator" content="{{ site.generator }}">
 <meta property="og:title" content="{{ tmp_title }}">
 <meta property="og:locale" content="{% if en_flag %}en_US{% else %}ko_KR{% endif %}">
 <meta name="description" content="{{ tmp_content }}">
-<meta property="og:description" content="{{  tmp_content }}">
+<meta property="og:description" content="{{ tmp_content }}">
 <link rel="canonical" href="{{ tmp_url }}">
 <meta property="og:url" content="{{ tmp_url }}">
 <meta property="og:site_name" content="{{ site.title }}">
