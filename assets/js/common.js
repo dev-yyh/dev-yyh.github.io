@@ -364,7 +364,7 @@ function searchRelated(pages){
         contents.classList.add("related-item");
         contents.innerHTML = '<a href="' + post.url +
             '"><img src="' + post.thumbnail +
-            '" art="' + category + 
+            '" alt="' + category + 
             '"/><p class="category">' + category +  
             '</p><p class="title">' + post.title + 
             '</p><p class="date">' + date +
