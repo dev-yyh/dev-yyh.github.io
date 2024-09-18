@@ -1,7 +1,4 @@
-User-agent: Yeti
-Allow:/
-
-User-agent: Googlebot
+User-agent: *
 Allow:/
 
 Sitemap: https://dev-yyh.github.io/sitemap.xml
