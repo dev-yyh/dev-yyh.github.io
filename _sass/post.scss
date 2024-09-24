@@ -217,6 +217,8 @@ main {
 
   p, ul, table, div { margin-bottom:3rem; }
 
+  p + ol,
+  p + ul,
   p + div,
   p + pre,
   p + blockquote,
