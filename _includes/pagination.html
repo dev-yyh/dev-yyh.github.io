@@ -35,7 +35,7 @@
                     <div class="box_contents">
                         <a href="{{ sub_page.url | prepend: site.baseurl }}"><h2 class="title_post">{{ sub_page.title }}</h1></a>
                         <a href="{{ sub_page.url | prepend: site.baseurl }}" class="txt_post">
-                            {{ sub_page.content | markdownify | strip_html }}
+                            {% if sub_page.description %} {{ sub_page.description | strip_html | strip_newlines | truncate: 160}} {% else %} {{ sub_page | markdownify | strip_html  | truncate: 160 }} {% endif %}
                         </a>
                         <div class="info-post">
                             {%- assign sub_page_tree = sub_page.path | split: "/" -%}
